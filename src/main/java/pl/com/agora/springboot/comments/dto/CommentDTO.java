@@ -3,9 +3,9 @@ package pl.com.agora.springboot.comments.dto;
 
 public class CommentDTO {
 
-	private String content;
-	private String author;
-	private Integer articleId;
+	private String articleId;
+    private String author;
+    private String content;
 
 	public String getContent() {
 		return content;
@@ -13,23 +13,24 @@ public class CommentDTO {
 	public String getAuthor() {
 		return author;
 	}
-	public Integer getArticleId() {
+	public String getArticleId() {
 		return articleId;
 	}
 	
 	public CommentDTO() {
 	}
 
-	public CommentDTO(String content, String author, Integer articleId) {
-		this.content = content;
-		this.author = author;
+	public CommentDTO(String articleId, String author, String content) {
+		super();
 		this.articleId = articleId;
+		this.author = author;
+		this.content = content;
 	}
-
 	@Override
 	public String toString() {
-		return "CommentDTO [content=" + content + ", author=" + author
-				+ ", articleId=" + articleId + "]";
-	}	
+		return "CommentDTO [articleId=" + articleId + ", author=" + author
+				+ ", content=" + content + "]";
+	}
+
 	
 }

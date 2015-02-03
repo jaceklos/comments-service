@@ -19,7 +19,7 @@ public class CommentsApplication {
 					CommentsApplication.class }, args);
 
 		} catch (Exception e) {
-			logger.error("cannot run Comments Service", e);
+			logger.error("cannot run CommentsService", e);
 			throw e;
 		}	
 	}

@@ -20,7 +20,7 @@ public class Comment {
 	private String author;
 	
 	@Column
-	private Integer articleId;
+	private String articleId;
 	
 	public String getContent() {
 		return content;
@@ -34,10 +34,10 @@ public class Comment {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public Integer getArticleId() {
+	public String getArticleId() {
 		return articleId;
 	}
-	public void setArticleId(Integer articleId) {
+	public void setArticleId(String articleId) {
 		this.articleId = articleId;
 	}	
 	public Integer getCommentId() {
@@ -47,7 +47,7 @@ public class Comment {
 	public Comment() {
 	}
 	
-	public Comment(String content, String author, Integer articleId) {
+	public Comment(String articleId, String author, String content) {
 		super();
 		this.content = content;
 		this.author = author;
@@ -58,6 +58,7 @@ public class Comment {
 		return "Comment [commentId=" + commentId + ", content=" + content
 				+ ", author=" + author + ", articleId=" + articleId + "]";
 	}
+	
 	
 	
 	

@@ -36,7 +36,7 @@ public class CommentsController {
     }
 	
 	@RequestMapping(value = "/{articleId}", method = { RequestMethod.GET, RequestMethod.POST })
-    public @ResponseBody List<CommentDTO> getComments(@PathVariable("articleId") Integer articleId) {
+    public @ResponseBody List<CommentDTO> getComments(@PathVariable("articleId") String articleId) {
     	
 		logger.info("get Comments by articleId : " + articleId);
 		List<CommentDTO> commentDTOs = commentsService.getComments(articleId);

@@ -8,5 +8,5 @@ public interface CommentsService {
 	
 	void putComment(CommentDTO comment);
 	
-	List<CommentDTO> getComments(Integer articleId);
+	List<CommentDTO> getComments(String articleId);
 }
