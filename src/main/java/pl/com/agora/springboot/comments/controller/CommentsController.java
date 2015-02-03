@@ -30,7 +30,7 @@ public class CommentsController {
     public void putComment(@RequestBody CommentDTO commentDTO) {
     			
 		
-		logger.info("put comment : " + commentDTO);
+		logger.info("received comment : " + commentDTO);
 		commentsService.putComment(commentDTO);
 				
     }
@@ -38,7 +38,7 @@ public class CommentsController {
 	@RequestMapping(value = "/{articleId}", method = { RequestMethod.GET, RequestMethod.POST })
     public @ResponseBody List<CommentDTO> getComments(@PathVariable("articleId") String articleId) {
     	
-		logger.info("get Comments by articleId : " + articleId);
+		logger.info("requested by articleId : " + articleId);
 		List<CommentDTO> commentDTOs = commentsService.getComments(articleId);
 		
 		return commentDTOs;
